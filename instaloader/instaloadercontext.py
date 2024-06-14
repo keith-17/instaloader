@@ -48,7 +48,7 @@ def default_iphone_headers() -> Dict[str, Any]:
             'x-fb-server-cluster': 'True',
             'x-fb': '1',
             'x-ig-abr-connection-speed-kbps': '2',
-            'x-ig-app-id': '124024574287414',
+            'x-ig-app-id': 'APP-ID',
             'x-ig-app-locale': 'en-US',
             'x-ig-app-startup-country': 'US',
             'x-ig-bandwidth-speed-kbps': '0.000',
