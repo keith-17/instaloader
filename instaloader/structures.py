@@ -1965,7 +1965,7 @@ class Hashtag:
             lambda d: d['data']['hashtag']['edge_hashtag_to_media'],
             lambda n: Post(self._context, n),
             {'tag_name': self.name},
-            f"https://www.instagram.com/explore/tags/{self.name}/"
+            f"https://www.instagram.com/api/v1/tags/web_info/?tag_name={self.name}"
         )
 
 
