@@ -1811,7 +1811,7 @@ class Hashtag:
         return self._node["name"].lower()
 
     def _query(self, params):
-        json_response = self._context.get_json("explore/tags/{0}/".format(self.name), params)
+        json_response = self._context.get_json("api/v1/tags/web_info/?tag_name={0}".format(self.name), params)
         return json_response["graphql"]["hashtag"] if "graphql" in json_response else json_response["data"]
 
     def _obtain_metadata(self):
@@ -1965,7 +1965,7 @@ class Hashtag:
             lambda d: d['data']['hashtag']['edge_hashtag_to_media'],
             lambda n: Post(self._context, n),
             {'tag_name': self.name},
-            f"https://www.instagram.com/explore/tags/{self.name}/"
+            f"https://www.instagram.com/api/v1/tags/web_info/?tag_name={self.name}"
         )
 
 
