@@ -9,6 +9,7 @@ import textwrap
 import time
 import urllib.parse
 import uuid
+import re
 from contextlib import contextmanager
 from datetime import datetime, timedelta
 from functools import partial
