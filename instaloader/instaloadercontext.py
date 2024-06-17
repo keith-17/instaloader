@@ -224,6 +224,7 @@ class InstaloaderContext:
         # get app-id and set to request header
         response = session.get('https://www.instagram.com/')
         appid = re.search('appId":"(\d*)', response.text)[1]
+        print(f'{appid} This is the APPID KEITHE HERE!!!')
         session.headers.update({'x-ig-app-id': appid})
         # Override default timeout behavior.
         # Need to silence mypy bug for this. See: https://github.com/python/mypy/issues/2427
